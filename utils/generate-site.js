@@ -33,6 +33,9 @@ const copyFile = () => {
     });
 };
 
+
+module.exports = { writeFile, copyFile };
+
 /*
   // demo HTML code
 const sampleHtml = '<h1>This will be written to the file!</h1>';

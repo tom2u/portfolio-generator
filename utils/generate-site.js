@@ -18,6 +18,22 @@ const writeFile = fileContent => {
     });
   };
 
+const copyFile = () => {
+    return new Promise((resolve, reject) => {
+
+        fs.copyFile('./src/style.css', './dist/style.css', err => {
+            if (err) {
+              reject(err);
+              return;
+            }
+            resolve(
+                console.log('Style sheet copied successfully!')
+            );
+        });
+    });
+};
+
+/*
   // demo HTML code
 const sampleHtml = '<h1>This will be written to the file!</h1>';
 
@@ -30,3 +46,4 @@ writeFile(sampleHtml)
     // this will run when we use `reject()`
     console.log(errorResponse);
   });
+*/
